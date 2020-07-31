@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "image-helper-webapp": {
+    "angular-starter": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,14 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/image-helper-webapp",
+            "outputPath": "dist/angular-starter",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "image-helper-webapp:build"
+            "browserTarget": "angular-starter:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "image-helper-webapp:build:production"
+              "browserTarget": "angular-starter:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "image-helper-webapp:build"
+            "browserTarget": "angular-starter:build"
           }
         },
         "test": {
@@ -88,7 +88,7 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "image-helper-webapp:serve"
+            "devServerTarget": "angular-starter:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "image-helper-webapp:serve:production"
+              "devServerTarget": "angular-starter:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "image-helper-webapp"
+  "defaultProject": "angular-starter"
 }

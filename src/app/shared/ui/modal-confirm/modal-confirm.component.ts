@@ -12,19 +12,19 @@ export class ModalConfirmComponent implements OnInit {
   @Input() confirmButton = 'OK';
   constructor(public activeModal: NgbActiveModal) { }
 
-  confirm() {
+  confirm(): void {
     this.activeModal.close({
       confirmed: true
     });
   }
 
-  cancel() {
+  cancel(): void {
     this.activeModal.close({
       confirmed: false
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

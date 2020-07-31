@@ -1,9 +1,9 @@
 {
-  "name": "image-helper-webapp",
+  "name": "angular-starter",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --ssl --open --port 3000",
+    "start": "ng serve --open --port 3000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -28,6 +28,7 @@
     "@ngrx/effects": "^9.2.0",
     "@ngrx/router-store": "^9.2.0",
     "@ngrx/store": "^9.2.0",
+    "@sentry/browser": "^5.20.1",
     "@types/lodash": "^4.14.158",
     "bootstrap": "^4.5.0",
     "lodash": "^4.17.19",

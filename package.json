@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "post-build": "node ./build/post-build.js",
-    "build-production": "ng build --prod --aot --outputPath=deploy && node ./build/post-build.js",
-    "build-staging": "ng build --configuration=staging --outputPath=deploy && node ./build/post-build.js"
+    "build-production": "ng build --prod --aot && node ./build/post-build.js",
+    "build-staging": "ng build --configuration=staging && node ./build/post-build.js"
   },
   "private": true,
   "dependencies": {

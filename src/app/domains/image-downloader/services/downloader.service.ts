@@ -15,7 +15,7 @@ export class DownloaderService {
     ) { }
 
   download(data?: RequestParamsToDownload): Observable<any> {
-    return this.http.post<any>(this.cfs.getUrl(this.cfs.api.download, null, false), data, {
-      responseType: 'arraybuffer' as 'json'});
+    return this.http.post(this.cfs.getUrl(this.cfs.api.download, null, false), data, {
+      responseType: 'arraybuffer'});
   }
 }

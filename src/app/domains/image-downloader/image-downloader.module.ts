@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ImageDownloaderComponent } from './image-downloader/image-downloader.component';
+import { ImageDownloaderComponent } from './components/image-downloader/image-downloader.component';
 import { UiModule } from '../../shared/ui/ui.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ImageDownloaderComponent],
@@ -10,7 +11,8 @@ import { UiModule } from '../../shared/ui/ui.module';
   ],
   imports: [
     CommonModule,
-    UiModule
+    UiModule,
+    FormsModule
   ]
 })
 export class ImageDownloaderModule { }

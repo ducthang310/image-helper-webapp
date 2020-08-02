@@ -10,6 +10,8 @@ export class ConfigService {
     auth: {
       login: '/auth/login'
     },
+    download: '/download',
+    compress: '/compress'
   };
 
   constructor() {

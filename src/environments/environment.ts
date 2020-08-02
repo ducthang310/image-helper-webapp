@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   name: 'dev',
   sentryDns: null,
-  baseApiUrl: null
+  baseApiUrl: 'http://localhost:8000'
 };
 
 /*

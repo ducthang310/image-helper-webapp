@@ -14,6 +14,7 @@ export class CompressorService {
   ) { }
 
   compress(data: FormData): Observable<any> {
-    return this.http.post<any>(this.cfs.getUrl(this.cfs.api.compress, null, false), data);
+    return this.http.post(this.cfs.getUrl(this.cfs.api.compress, null, false), data, {
+      responseType: 'arraybuffer'});
   }
 }

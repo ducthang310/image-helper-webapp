@@ -21,11 +21,11 @@
       <form class="col-md-7 img-compressor__right">
         <h5>Zip your files, then upload & process</h5>
 
-        <p>
-          <input type="file" name="file" [(ngModel)]="zipFile" (ngModelChange)="compress()"/>
+        <p >
+          <input type="file" name="images" [(ngModel)]="zipFile" (change)="compress($event)"/>
         </p>
 
-        <button type="button" class="btn btn-primary" disabled>Processing...</button>
+        <button type="button" class="btn btn-primary" disabled *ngIf="loading">Processing...</button>
 
       </form>
     </div>

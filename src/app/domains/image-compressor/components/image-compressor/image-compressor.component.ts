@@ -10,19 +10,30 @@ import { Captain } from '../../../../shared/utilities/captain';
 })
 export class ImageCompressorComponent implements OnInit {
   zipFile: File;
+  loading: boolean;
 
   constructor(
     private compressorService: CompressorService,
     private responseHelper: ResponseHelperService
   ) { }
 
-  compress(): void {
+  compress(event: Event): void {
+    const target: any = event.target;
+    if (!target.files || !target.files.length) {
+      return;
+    }
+
     const data = new FormData();
-    data.append('file', this.zipFile);
+    data.append('images', target.files[0]);
+    this.loading = true;
     this.compressorService.compress(data)
       .subscribe(res => {
-        Captain.downLoadFile(res, 'application/zip');
+        this.loading = false;
+        setTimeout(() => {
+          Captain.downLoadFile(res, 'application/zip');
+        }, 0);
       }, errorResponse => {
+        this.loading = false;
         this.responseHelper.showErrorMessages(errorResponse);
       });
   }
